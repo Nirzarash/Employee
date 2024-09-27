@@ -8,7 +8,7 @@ app.use(express.json());
 
 app.post("/save" , (req,res) => {
 	console.log("Data received:",req.body)
-	const url = "mongodb://0.0.0.0:27017";
+	const url = "mongodb+srv://nirzarashende:GlrzGNOaZHe1xtyw@cluster0.6vbsc.mongodb.net/retryWrites=true&w=majority&appName=Cluster0";
 	const client = new MongoClient(url);
 	const db = client.db("task4db");
 	const coll = db.collection("client");
@@ -18,7 +18,7 @@ app.post("/save" , (req,res) => {
 	.catch(error => res.send(error));	
 })
 app.get("/read",(req,res) => {
-	const url = "mongodb://0.0.0.0:27017";
+	const url = "mongodb+srv://nirzarashende:GlrzGNOaZHe1xtyw@cluster0.6vbsc.mongodb.net/retryWrites=true&w=majority&appName=Cluster0";
 	const client = new MongoClient(url);
 	const db = client.db("task4db");
 	const coll = db.collection("client");
@@ -27,7 +27,7 @@ app.get("/read",(req,res) => {
 	.catch(error=> res.send(error));	
 })
 app.put("/change", (req,res)=>{
-	const url = "mongodb://0.0.0.0:27017";
+	const url = "mongodb+srv://nirzarashende:GlrzGNOaZHe1xtyw@cluster0.6vbsc.mongodb.net/retryWrites=true&w=majority&appName=Cluster0";
 	const client = new MongoClient(url);
 	const db = client.db("task4db");
 	const coll = db.collection("client");
@@ -36,7 +36,7 @@ app.put("/change", (req,res)=>{
 	.catch(error => res.send(send));
 })
 app.delete("/remove", (req,res) => {
-	const url = "mongodb://0.0.0.0:27017";
+	const url = "mongodb+srv://nirzarashende:GlrzGNOaZHe1xtyw@cluster0.6vbsc.mongodb.net/retryWrites=true&w=majority&appName=Cluster0";
 	const client = new MongoClient(url);
 	const db = client.db("task4db");
 	const coll = db.collection("client");
